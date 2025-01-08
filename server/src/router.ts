@@ -19,6 +19,8 @@ router.get("/movies", movieActions.getMovies);
 
 router.get("/movies/:id", movieActions.getOne);
 
+router.post("/movies", movieActions.postMovie);
+
 /* ************************************************************************* */
 
 export default router;
