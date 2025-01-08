@@ -13,6 +13,12 @@ router.get("/api/items", itemActions.browse);
 router.get("/api/items/:id", itemActions.read);
 router.post("/api/items", itemActions.add);
 
+import movieActions from "./modules/movie/movieActions";
+
+router.get("/movies", movieActions.getMovies);
+
+router.get("/movies/:id", movieActions.getOne);
+
 /* ************************************************************************* */
 
 export default router;
