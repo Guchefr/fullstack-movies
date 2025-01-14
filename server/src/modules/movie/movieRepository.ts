@@ -20,4 +20,8 @@ const createMovie = (movie: Movie) => {
   ]);
 };
 
-export default { readMovies, readMovieById, createMovie };
+const updateMovie = (movie: Movie, id: number) => {
+  return client.query<Result>("UPDATE movie SET ? WHERE id = ?", [movie, id]);
+};
+
+export default { readMovies, readMovieById, createMovie, updateMovie };
